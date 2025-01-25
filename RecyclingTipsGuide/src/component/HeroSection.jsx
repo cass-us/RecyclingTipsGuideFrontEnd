@@ -67,7 +67,7 @@ const HeroSection = () => {
         setIsModalOpen(false); 
 
        
-        navigate("/dashboard"); 
+        navigate("/admin-dashboard"); 
       })
       .catch((error) => {
         console.error("Login failed", error);
@@ -87,8 +87,8 @@ const HeroSection = () => {
        
         <div className="flex items-center space-x-4">
           <button
-            onClick={() => setIsModalOpen(true)} // Open the modal when clicked
-            className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transform transition-all hover:scale-105"
+            onClick={() => setIsModalOpen(true)} 
+            className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600  transform transition-all hover:scale-105"
             style={{
               background: "linear-gradient(45deg, #76c893, #4caf50)",
               border: "2px solid #3e8e41",
@@ -145,8 +145,7 @@ const HeroSection = () => {
             {errorMessage && (
               <div className="text-red-500 text-center mt-4">{errorMessage}</div>
             )}
-
-            ]
+            
             <div className="flex justify-between items-center">
               <button
                 onClick={handleLogin} 

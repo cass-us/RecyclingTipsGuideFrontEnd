@@ -4,11 +4,12 @@ import HeroSection from "./component/HeroSection.jsx";
 import MainSection from "./component/MainSection.jsx";
 import FooterSection from "./component/FooterSection.jsx";
 import AdminDashBoard from "./component/AdminDashBoard.jsx"; 
-
+import WasteCategory from "./component/pages/WasteCategory.jsx";
+import DisposalLines from "./component/pages/DisposalLines.jsx";
+import RecyclingTip from "./component/pages/RecyclingTip.jsx";
 export default function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
- 
   const handleLogin = () => {
     setIsLoggedIn(true);
   };
@@ -21,21 +22,28 @@ export default function App() {
             path="/"
             element={
               <>
-                <HeroSection handleLogin={handleLogin} />
+                {/* <HeroSection handleLogin={handleLogin} />
                 <MainSection />
-                <FooterSection />
+                <FooterSection /> */}
+                 {/* {*<MainSection />
+               <AdminDashBoard />*} */}
+               {/* <WasteCategory/> */}
+               <DisposalLines/>
+               <RecyclingTip/>
               </>
             }
           />
         )}
 
-       
+        
         {isLoggedIn && (
           <Route path="/admin-dashboard" element={<AdminDashBoard />} />
         )}
+
+      
         <Route
           path="*"
-          element={isLoggedIn ? <Navigate to="/AdminDashBoard" /> : <Navigate to="/AdminDashBoard" />}
+          element={isLoggedIn ? <Navigate to="/admin-dashboard" /> : <Navigate to="/" />}
         />
       </Routes>
     </Router>

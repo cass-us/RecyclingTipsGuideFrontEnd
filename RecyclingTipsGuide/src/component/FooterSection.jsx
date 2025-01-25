@@ -2,7 +2,7 @@ import React from 'react';
 
 const FooterSection = () => {
   return (
-    <footer className="bg-green-300 opacity-80 text-white py-6">
+    <footer className="bg-green-300 opacity-80 text-white py-6 mt-auto">
       <div className="container mx-auto px-6 text-center">
         <p className="text-sm">&copy; 2025 TeamTech'z IT Solutions. All rights reserved.</p>
         <div className="flex justify-center space-x-4 mt-4">
