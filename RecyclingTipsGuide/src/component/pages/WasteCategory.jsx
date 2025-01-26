@@ -55,7 +55,7 @@ const WasteCategory = () => {
  
   const handleDeleteCategory = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8082/api/waste-category/${id}`, {
+      const response = await fetch(`http://localhost:8082/api/waste-category/deleteCategory/${id}`, {
         method: "DELETE",
       });
 

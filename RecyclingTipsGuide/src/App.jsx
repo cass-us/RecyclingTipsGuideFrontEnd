@@ -22,14 +22,14 @@ export default function App() {
             path="/"
             element={
               <>
-                {/* <HeroSection handleLogin={handleLogin} />
+                <HeroSection handleLogin={handleLogin} />
                 <MainSection />
-                <FooterSection /> */}
-                 {/* {*<MainSection />
-               <AdminDashBoard />*} */}
-               {/* <WasteCategory/> */}
+                <FooterSection /> 
+               
+               <AdminDashBoard />
+               {/* <WasteCategory/> 
                <DisposalLines/>
-               <RecyclingTip/>
+               <RecyclingTip/> */}
               </>
             }
           />
