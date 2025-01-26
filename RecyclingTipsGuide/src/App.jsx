@@ -1,51 +1,25 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Only import once
 import HeroSection from "./component/HeroSection.jsx";
 import MainSection from "./component/MainSection.jsx";
 import FooterSection from "./component/FooterSection.jsx";
-import AdminDashBoard from "./component/AdminDashBoard.jsx"; 
-import WasteCategory from "./component/pages/WasteCategory.jsx";
-import DisposalLines from "./component/pages/DisposalLines.jsx";
-import RecyclingTip from "./component/pages/RecyclingTip.jsx";
-export default function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+import AdminDashBoard from "./component/AdminDashBoard.jsx";
 
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
-
+function App() {
+  
   return (
-    <Router>
+    <Router> 
       <Routes>
-        {!isLoggedIn && (
-          <Route
-            path="/"
-            element={
-              <>
-                <HeroSection handleLogin={handleLogin} />
-                <MainSection />
-                <FooterSection /> 
-               
-               <AdminDashBoard />
-               {/* <WasteCategory/> 
-               <DisposalLines/>
-               <RecyclingTip/> */}
-              </>
-            }
-          />
-        )}
-
-        
-        {isLoggedIn && (
-          <Route path="/admin-dashboard" element={<AdminDashBoard />} />
-        )}
-
-      
-        <Route
-          path="*"
-          element={isLoggedIn ? <Navigate to="/admin-dashboard" /> : <Navigate to="/" />}
-        />
+        <Route path="/" element={
+          <>
+            <HeroSection/>
+            <MainSection/>
+            <FooterSection/>
+          </>
+        } />
+        <Route path="/admin-dashboard" element={<AdminDashBoard />} />
       </Routes>
     </Router>
   );
 }
+
+export default App;
