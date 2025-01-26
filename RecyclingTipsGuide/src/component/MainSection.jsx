@@ -55,9 +55,6 @@ const MainSection = () => {
   return (
     <div className="bg-gray-50 py-12">
       <div className="container mx-auto px-6 text-center">
-        <div className="flex justify-center mb-8">
-          <img src={rec} alt="Recycling Codes Infographic" className="max-w-full h-auto rounded-lg shadow-lg" />
-        </div>
         <h2 className="text-4xl font-bold text-green-600 mb-6">Waste Categories</h2>
         <p className="text-xl text-gray-700 mb-8">
           Choose a waste category to explore detailed disposal guides and recycling tips.
